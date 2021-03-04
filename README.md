@@ -6,10 +6,24 @@ npm install --global --production windows-build-tools
 
 ## Setting up Dev
 
-Один раз на проект установить все зависимости.
+### Чтобы установить с помощью NPM:
 
-npm install
-И запустить режим разработки.
+npm install parcel-bundler --save-dev
+
+### Создайте файл package.json в папке вашего проекта, используя:
+
+npm init -y
+
+### Далее, добавьте следующие скрипты в package.json вашего проекта:
+
+{
+"scripts": {
+"dev": "parcel <your entry file>",
+"build": "parcel build <your entry file>"
+}
+}
+
+### И запустить режим разработки.
 
 npm run dev
 Во вкладке браузера перейти по адресу http://localhost:1234.
